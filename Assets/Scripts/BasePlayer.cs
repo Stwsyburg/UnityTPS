@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BasePlayer : MonoBehaviour
 {
-    public int HP=100;
+    public static int HP=100;
     public bool isAlive()
     {
         return HP > 0;

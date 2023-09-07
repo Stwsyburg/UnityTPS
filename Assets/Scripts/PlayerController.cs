@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : BasePlayer
+public class PlayerController : MonoBehaviour
 {
     private Rigidbody rig;
     private Animator ani;
@@ -10,6 +10,7 @@ public class PlayerController : BasePlayer
     private float horizontal;
     private float vertical;
     private float speed;
+    public  int HP;
     LayerMask floorMask;
     private RaycastHit raycastHit;
     private Vector3 faceVec;
@@ -26,7 +27,7 @@ public class PlayerController : BasePlayer
     // Update is called once per frame
     void Update()
     {
-       
+        
     }
 
     private void FixedUpdate()
@@ -68,5 +69,24 @@ public class PlayerController : BasePlayer
             Quaternion faceDir = Quaternion.LookRotation(faceVec);
             rig.MoveRotation(faceDir);
         }
+    }
+
+    public bool isAlive()
+    {
+        return HP > 0;
+    }
+
+    public void GetDamage(int dmg)
+    {
+        HP -= dmg;
+        if (!isAlive())
+        {
+            Die();
+        }
+    }
+
+    public virtual void Die()
+    {
+        Destroy(this.gameObject);
     }
 }

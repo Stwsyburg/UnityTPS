@@ -20,6 +20,9 @@ public class CameraFollow : MonoBehaviour
 
     private void FixedUpdate()
     {
-        this.transform.position = follow.position + disVec;
+        if (follow != null)
+        {
+            this.transform.position = follow.position + disVec;
+        }
     }
 }
