@@ -14,9 +14,9 @@ public class EnemyClone : MonoBehaviour
     {
         while(true)
         {
-            if(PlayerPos!=null)
+            yield return new WaitForSeconds(waitTime);
+            if (PlayerPos!=null)
             {
-                yield return new WaitForSeconds(waitTime);
                 Vector3 newPos = new Vector3(Random.Range(PlayerPos.position.x - DisToPlayer, PlayerPos.position.x + DisToPlayer) + 6, 0, Random.Range(PlayerPos.position.z - DisToPlayer, PlayerPos.position.z + DisToPlayer) + 5);
                 GameObject e = Instantiate(Enemy.gameObject, newPos, Quaternion.identity);
                 e.transform.SetParent(Enemies.transform);

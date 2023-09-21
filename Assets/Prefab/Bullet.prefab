@@ -111,9 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3162dcae8343b114a818bebe52b8bafa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletSpeed: 300
-  Damage: 10
-  AutoAtt: 0
+  BulletSpeed: 20
+  AutoAtt: 1
 --- !u!54 &614946547679507137
 Rigidbody:
   m_ObjectHideFlags: 0

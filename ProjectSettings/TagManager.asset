@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - FirePos
+  - Exp1s
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - floor
   - enemy
   - bullet
-  - 
+  - prop
   - 
   - 
   - 

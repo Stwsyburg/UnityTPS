@@ -1697,11 +1697,13 @@ MonoBehaviour:
   walkSpeed: 3
   waitTime: 0.5
   distance: 10
-  FindDistance: 10
-  AttDistance: 5
+  FindDistance: 15
+  AttDistance: 3
   DisToPlayer: 30
   damage: 5
   EnemyHP: 100
+  EXP1s: {fileID: 0}
+  Exp1: {fileID: 8482792090420666613, guid: b3e8fd027760328428fd322a7f6ebce6, type: 3}
 --- !u!54 &5929470704051746396
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -14,14 +14,25 @@ public class PlayerController : MonoBehaviour
     LayerMask floorMask;
     private RaycastHit raycastHit;
     private Vector3 faceVec;
+    private float Exp_val;
+    private float Level_up_val;
+    private int Level;
 
     // Start is called before the first frame update
     void Start()
     {
         rig = GetComponent<Rigidbody>();
         ani = GetComponent<Animator>();
+        BloodManager.CurrentBlood = HP;
+        BloodManager.MaxBlood = HP;
+        BulletFly.Damage = 10;
         speed = 6;
         floorMask = LayerMask.GetMask("floor");
+        Exp_val = 0;
+        Level = 1;
+        Level_up_val = 2 * Level ^ 3 + 20 * Level ^ 2 - 10 * Level + 100;
+        ExpManager.CurrentExp = Exp_val;
+        ExpManager.MaxExp = Level_up_val;
     }
 
     // Update is called once per frame
@@ -79,6 +90,11 @@ public class PlayerController : MonoBehaviour
     public void GetDamage(int dmg)
     {
         HP -= dmg;
+        if(HP < 0)
+        {
+            HP = 0;
+        }
+        BloodManager.CurrentBlood = HP;
         if (!isAlive())
         {
             Die();
@@ -89,4 +105,31 @@ public class PlayerController : MonoBehaviour
     {
         Destroy(this.gameObject);
     }
+
+    public void Get_Exp(int exp)
+    {
+        Exp_val += exp;
+        if(Exp_val < Level_up_val)
+            ExpManager.CurrentExp = Exp_val;
+        else
+        {
+            ExpManager.CurrentExp = Level_up_val;
+            Exp_val = Exp_val - Level_up_val;
+            Level += 1;
+            Level_UP();
+            Level_up_val = 2 * Level ^ 3 + 20 * Level ^ 2 - 10 * Level + 100;
+            ExpManager.CurrentExp = Exp_val;
+            ExpManager.MaxExp = Level_up_val;
+        }
+    }
+
+   private void Level_UP()
+    {
+        HP += 10*Level;
+        BloodManager.CurrentBlood = HP;
+        BloodManager.MaxBlood = HP;
+        //Debug.Log(BloodManager.CurrentBlood);
+        BulletFly.Damage += Level;
+    }
+
 }

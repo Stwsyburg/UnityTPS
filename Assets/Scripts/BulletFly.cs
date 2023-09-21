@@ -6,7 +6,7 @@ public class BulletFly : MonoBehaviour
 {
     private Rigidbody bulletRig;
     public float BulletSpeed;
-    public  int Damage;
+    public   static int Damage;
     private Transform target;
     private Vector3 lastTargetPos; //目标位置
     private Vector3 startPos;//开始位置

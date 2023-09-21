@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638289765944966089
-    m_Hash: 2715422950
+      ticks: 638306405058396402
+    m_Hash: 2546377564
   m_LockFileStatus:
     m_FilePath: "D:/\u6587\u6863/unity/TPS_test/Packages/packages-lock.json"
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638289765944996456
-    m_Hash: 259120658
+      ticks: 638306405058427041
+    m_Hash: 1567504065
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -22,6 +22,58 @@ m_LocalPackages:
 m_ProjectPath: "D:/\u6587\u6863/unity/TPS_test/Packages"
 m_EditorVersion: 2021.3.26f1c1 (19b503b0ef33)
 m_ResolvedPackages:
+- packageId: com.unity.2d.sprite@1.0.0
+  testable: 0
+  isDirectDependency: 1
+  version: 1.0.0
+  source: 2
+  resolvedPath: "D:\\\u6587\u6863\\unity\\TPS_test\\Library\\PackageCache\\com.unity.2d.sprite@1.0.0"
+  assetPath: Packages/com.unity.2d.sprite
+  name: com.unity.2d.sprite
+  displayName: 2D Sprite
+  author:
+    name: 
+    email: 
+    url: 
+  category: 2D
+  type: 
+  description: Use Unity Sprite Editor Window to create and edit Sprite asset properties
+    like pivot, borders and Physics shape
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 1.0.0
+    compatible:
+    - 1.0.0
+    verified: 1.0.0
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - 2d
+  - sprite
+  - sprite editor window
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.cn
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: 
+  hasRepository: 0
+  repository:
+    type: 
+    url: 
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 1.0.0
+    nextVersion: 
 - packageId: com.unity.ai.navigation@1.0.0-exp.4
   testable: 0
   isDirectDependency: 1
@@ -177,6 +229,7 @@ m_ResolvedPackages:
     - 2.1.0-preview.3
     - 2.1.0-preview.5
     - 2.1.0-preview.6
+    - 2.1.0
     compatible:
     - 2.0.4
     - 2.0.5
@@ -184,6 +237,7 @@ m_ResolvedPackages:
     - 2.1.0-preview.3
     - 2.1.0-preview.5
     - 2.1.0-preview.6
+    - 2.1.0
     verified: 2.0.7
   dependencies: []
   resolvedDependencies: []
@@ -447,10 +501,12 @@ m_ResolvedPackages:
     - 2.0.17
     - 2.0.18
     - 2.0.20
+    - 2.0.21
     compatible:
     - 2.0.18
     - 2.0.20
-    verified: 2.0.20
+    - 2.0.21
+    verified: 2.0.21
   dependencies:
   - name: com.unity.test-framework
     version: 1.1.9
@@ -942,6 +998,7 @@ m_ResolvedPackages:
     - 1.8.2
     - 1.8.3
     - 1.8.4
+    - 1.8.5
     compatible:
     - 1.6.5
     - 1.7.0-pre.1
@@ -957,6 +1014,7 @@ m_ResolvedPackages:
     - 1.8.2
     - 1.8.3
     - 1.8.4
+    - 1.8.5
     verified: 1.6.5
   dependencies:
   - name: com.unity.modules.director
